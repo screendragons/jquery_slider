@@ -7,23 +7,27 @@
 <body>
   <h1>Slider made with HTML, CSS and jQuery</h1>
 
-  <div id="slider">
-    <a href="#" class="control_next">></a>
-    <a href="#" class="control_prev"><</a>
-    <ul>
-      <li>SLIDE 1</li>
-      <li style="background: #aaa;">SLIDE 2</li>
-      <li>SLIDE 3</li>
-      <li style="background: #aaa;">SLIDE 4</li>
-    </ul>
-  </div>
-
-  <div class="slider_option">
-    <input type="checkbox" id="checkbox">
-    <label for="checkbox">Autoplay Slider</label>
-  </div>
+  <section class="demo">
+    <button class="next">Next</button>
+    <button class="prev">Previous</button>
+    <div class="container">
+      <div style="display: inline-block;">
+        <img src="images/langlaufen.jpg"/>
+      </div>
+      <div>
+       <img src="images/skiing.jpg"/>
+      </div>
+      <div>
+        <img src="images/snowboarding.jpg"/>
+      </div>
+    </div>
+  </section>
 
   <script src="js/main.js"></script>
+  <script
+    src="http://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
 </body>
 </html>
 
