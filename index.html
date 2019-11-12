@@ -7,28 +7,45 @@
 <body>
   <h1>Slider made with HTML, CSS and jQuery</h1>
 
-  <section class="demo">
-    <button class="next">Next</button>
-    <button class="prev">Previous</button>
-    <div class="container">
-      <div style="display: inline-block;">
-        <img src="images/langlaufen.jpg"/>
-      </div>
-      <div>
-       <img src="images/skiing.jpg"/>
-      </div>
-      <div>
-        <img src="images/snowboarding.jpg"/>
+  <div class="container">
+
+    <div class="slider-wrapper">
+      <div class="inner-wrapper">
+        <div class="slide" id="1" >
+          <img src="images/langlaufen.jpg">
+        </div>
+        <div class="slide" id="2" >
+          <img src="images/skiing.jpg">
+        </div>
+        <div class="slide" id="3" >
+          <img src="images/snowboarding.jpg">
+        </div>
       </div>
     </div>
-  </section>
 
-  <script src="js/main.js"></script>
-  <script
-    src="http://code.jquery.com/jquery-3.4.1.js"
-    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    crossorigin="anonymous"></script>
+    <div class="button prev"></div>
+    <div class="button next"></div>
+  </div>
+
+  <div class="bullets">
+    <span class="bullet active" id="bullet1" data-image="0" data-slide="0"></span>
+    <span class="bullet" id="bullet2" data-image="1" data-slide="1"></span>
+    <span class="bullet" id="bullet3" data-image="2" data-slide="2"></span>
+  </div>
+
+  <!-- <ul>
+     <li id="controle1"><a href="#">•</a></li>
+     <li id="controle2"><a href="#">•</a></li>
+     <li id="controle3"><a href="#">•</a></li>
+   </ul>
+ -->
 </body>
 </html>
 
+<script
+  src="http://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+</script>
+<script src="js/main.js"></script>
 

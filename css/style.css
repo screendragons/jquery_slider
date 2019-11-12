@@ -1,29 +1,148 @@
-.container {
-  max-width: 400px;
-  background-color: black;
-  margin: 0 auto;
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+::-moz-selection
+{
+  background: transparent;
+}
+
+::selection
+{
+  background: transparent;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body
+{
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  height: 94vh;
   position: relative;
 }
-.container div {
-  background-color: white;
-  width: 100%;
-  display: inline-block;
-  display: none;
+
+h1
+{
+  text-align: center;
+  font-size: 1.5em;
+  margin: 30px 0;
+  font-weight: 700;
 }
-.container img {
+
+.container
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.slider-wrapper
+{
+  width: 600px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.inner-wrapper
+{
+  width: 500%;
+  height: 100%;
+  position: relative;
+
+}
+
+.slide
+{
+  width: calc(100% / 5);
+  height: 100%;
+  float: left;
+  font-size: 100px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img
+{
   width: 100%;
   height: auto;
 }
 
-button {
+.button
+{
+  width: 30px;
+  height: 30px;
+  border-top: 2px solid black;
   position: absolute;
+  cursor: pointer;
 }
 
-.next {
-  right: 5px;
+.prev
+{
+  border-left: 2px solid black;
+  left: 10%;
+  transform: rotate(-45deg);
 }
 
-.prev {
-  left: 5px;
+.next
+{
+  border-right: 2px solid black;
+  right: 10%;
+  transform: rotate(45deg);
 }
+
+
+.bullets {
+    margin: 10px auto;
+    text-align: center;
+}
+.bullets .bullet {
+    width: 12px;
+    height: 12px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background-color: #808080;
+    display: inline-block;
+    cursor: pointer;
+}
+.bullets .active,
+.bullets .bullet:hover {
+    background-color: #333;
+}
+
+
+
+
+/*ul li {
+  margin: 0 0.2em;
+  display: inline;
+}
+
+ul {
+
+  height: 30px;
+  margin: 0;
+  height: 60px;
+  padding: 0;
+  text-align: center;
+}*/
+
+/*#slider:first-child {
+
+   position: relative;
+}*/
+
+/*a {
+  text-decoration: none;
+  color: #B2B2B2;
+}
+
+a:hover {
+  color: #CCCCCC;
+}
+*/
