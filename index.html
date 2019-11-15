@@ -8,29 +8,29 @@
   <h1>Slider made with HTML, CSS and jQuery</h1>
 
   <div class="container">
-
     <div class="slider-wrapper">
       <div class="inner-wrapper">
-        <div class="slide" id="1" >
-          <img src="images/langlaufen.jpg">
+        <div class="slide">
+          <img id="0" src="images/langlaufen.jpg" class="selected">
         </div>
-        <div class="slide" id="2" >
-          <img src="images/skiing.jpg">
+        <div class="slide">
+          <img id="1" src="images/skiing.jpg">
         </div>
-        <div class="slide" id="3" >
-          <img src="images/snowboarding.jpg">
+        <div class="slide">
+          <img id="2" src="images/snowboarding.jpg">
         </div>
       </div>
     </div>
 
     <div class="button prev"></div>
     <div class="button next"></div>
+
   </div>
 
   <div class="bullets">
-    <span class="bullet active" id="bullet1" data-image="0" data-slide="0"></span>
-    <span class="bullet" id="bullet2" data-image="1" data-slide="1"></span>
-    <span class="bullet" id="bullet3" data-image="2" data-slide="2"></span>
+    <a class="bullet active" id="bullet1"></a>
+    <a class="bullet" id="bullet2"></a>
+    <a class="bullet" id="bullet3"></a>
   </div>
 
   <!-- <ul>
@@ -48,4 +48,3 @@
   crossorigin="anonymous">
 </script>
 <script src="js/main.js"></script>
-

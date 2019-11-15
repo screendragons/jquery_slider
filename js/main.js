@@ -1,11 +1,9 @@
 jQuery(document).ready(function ($){
-
+  //previous and next button
   $(function() {
 
-    // the variable inWrap will be used in the class inner-wrapper
+    // the variable inWrap will be used for the class inner-wrapper
     var inWrap = $('.inner-wrapper');
-
-    var bullet = $('.bullets .bullet');
 
     // previous button
     // if you click on the previous button it will go back to the previous slider the .prev will target the inner-wrapper class
@@ -46,36 +44,36 @@ jQuery(document).ready(function ($){
     });
   });
 
-  // bulletpoints
-  bullet.on('click', function () {
+  // bullets
+  $(document).ready(function() {
+    // bullet one
+    // When bullet one in the navigation is clicked, the class active will be added to the id #bullet1
+    // and the id of the slider, #0 will be selected by the class selected
+    $('#bullet1').click(function(){
+      deselect();
+      $(this).addClass('active');
+      $('#0').addClass('selected');
+    });
+    // bullet two
+    $('#bullet2').click(function(){
+      deselect();
+      $(this).addClass('active');
+      $('#1').addClass('selected');
+    });
+    // bullet three
+    $('#bullet3').click(function(){
+      deselect();
+      $(this).addClass('active');
+      $('#2').addClass('selected');
+    });
+   });
 
-    // if you click on one of the bulletpoints, it will be active, if you click on another bulletpoint
-    // the class will be removed and another bulletpoint will be active
-    $(this).addClass('active').siblings().removeClass('active');
-
-    slide = $(this).data('slide');
-    if ($(this).hasClass('active')) {
-        slide.animate({'margin-left': (bullet.length - $(this).data('image')) * width }, slideClick);
-    }
-  });
-
-  // $("#controle1").click(function(e){
-  //     $("#1").fadeIn();
-  //     $("#2").fadeOut();
-  //     $("#3").fadeOut();
-  //   });
-
-  //   $("#controle2").click(function(e){
-  //     $("#1").fadeOut();
-  //     $("#2").fadeIn();
-  //     $("#3").fadeOut();
-  //   });
-
-  //   $("#controle3").click(function(e){
-  //     $("#1").fadeOut();
-  //     $("#2").fadeOut();
-  //     $("#3").fadeIn();
-  //   });
-
+  // deselect function
+  // if an bullet is deselected, the class active will be removed when another bullet is selected
+  function deselect(){
+   $('#bullet1, #bullet2, #bullet3').removeClass('active');
+   // the class of the id 0, 1 and 2 (= id of the slides) will be removed when another bullet is selected
+   $('#0, #1, #2').removeClass('selected');
+  }
 
 });
