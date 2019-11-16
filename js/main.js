@@ -25,7 +25,7 @@ jQuery(document).ready(function ($){
 
 
     // next button
-    // if the next button is clicked
+    // When you click the next button
     $('.next').on('click', function()
     {
       // next button (animation)
@@ -52,19 +52,21 @@ jQuery(document).ready(function ($){
     $('#bullet1').click(function(){
       deselect();
       $(this).addClass('active');
-      $('#0').addClass('selected');
+      $('img #0').addClass('selected');
     });
+
     // bullet two
     $('#bullet2').click(function(){
       deselect();
       $(this).addClass('active');
-      $('#1').addClass('selected');
+      $('img #1').addClass('selected');
     });
+
     // bullet three
     $('#bullet3').click(function(){
       deselect();
       $(this).addClass('active');
-      $('#2').addClass('selected');
+      $('img #2').addClass('selected');
     });
    });
 
@@ -73,7 +75,7 @@ jQuery(document).ready(function ($){
   function deselect(){
    $('#bullet1, #bullet2, #bullet3').removeClass('active');
    // the class of the id 0, 1 and 2 (= id of the slides) will be removed when another bullet is selected
-   $('#0, #1, #2').removeClass('selected');
+   $('img #0, img #1, img #2').removeClass('selected');
   }
 
 });
